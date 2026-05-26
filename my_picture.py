@@ -4,43 +4,36 @@ def draw_picture(width, height):
     """Draws a static picture."""
     
     # Fill the background
-    sg.fill_background("white")
+    sg.fill_background("#F1CC84")
     
-    # make some variables available
-    colors = ["red", "green", "blue", "cyan", "magenta", "yellow"]
-    
-    triangle_height = height/5
-    triangle_width = width / 3
-    
-    # Draw the tesselation
-    # code for red triangles
-    sg.set_fill_color(colors[0])
-    
-    # call fill
-    sg.fill_circle(450, 50,50)
+    # Halfcourt line
+    sg.set_outline_color("white")
+    sg.draw_line(300,0,300,400, 2)
 
-    # draw a mountain
-    sg.set_fill_color("#827e7e") # relatively dark gray
-    sg. fill_triangle(300, 150, 400, 20, 350, 150)
-    sg.set_fill_color("#c7c1c1") # lighter gray
-    sg. fill_triangle(350, 150, 400, 20, 550, 150)
+    # draw circle for logo
+    sg.set_line_thickness(10)
+    sg.set_fill_color("#DC8535")
+    sg.set_outline_color("#34569B")
+    sg.fill_circle(300, 200, 60)
 
-    # draw horizon
+    # Draw Y
     sg.set_outline_color("black")
-    sg.set_line_thickness(1)
-    sg.draw_line(0, 150, 600, 150)
-    
-    # Define the points the curve should bend through
-    river_points = [
-        (100, 150), # Start point
-        (300, 200), # Bends towards here
-        (200, 350), # Bends back here
-        (500, 500)  # End point
-    ]
+    sg.draw_line(300,250,300,195, 8)
+    sg.draw_line(270,160,300,200, 8)
+    sg.draw_line(330,160,300,200, 8)
 
-    sg.set_outline_color("blue")
-    sg.set_line_thickness(8)
-    sg.draw_curve(river_points)
+    # Draw N
+    sg.draw_line(260,175,260,225, 8)
+    sg.draw_line(260,180,280,220, 8)
+    sg.draw_line(280,175,280,225, 8)
+
+    # Draw K
+    sg.draw_line(320,175,320,225, 8)
+    sg.draw_line(320,200,340,225, 8)
+    sg.draw_line(320,200,340,175, 8)
+    
+    
+    
     
 
 if __name__ == "__main__":
