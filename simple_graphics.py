@@ -183,13 +183,13 @@ def draw_text(x, y, text_string, font_size=16):
     _canvas.create_text(x, y, text=text_string, fill=_fill_color, 
                         anchor="nw", font=("Arial", font_size))
 
-def three_point_line(color):
+def right_three_point_line(color):
     set_line_thickness(2)
     set_outline_color("white")
     draw_line(500,40,600,40)
     draw_line(500,360,600,360)
     draw_curve( [(500,40), (300,200), (500,360)] )
-def paint():
+def right_paint():
     #Inner paint
     set_fill_color("#DC8535")
     fill_rectangle(460, 160, 200, 80)
